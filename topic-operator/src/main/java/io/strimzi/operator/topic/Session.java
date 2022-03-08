@@ -272,7 +272,9 @@ public class Session extends AbstractVerticle {
         String password = config.get(Config.SASL_PASSWORD);
         String configSaslMechanism = config.get(Config.SASL_MECHANISM);
 
-        if (username.isEmpty() || password.isEmpty()) {
+        Boolean emptyCredentials = username.isEmpty() || password.isEmpty();
+
+        if (!SASL_TYPE_AWS_MSK_IAM.equals(configSaslMechanism) && emptyCredentials) {
             throw new InvalidConfigurationException("SASL credentials are not set");
         }
 

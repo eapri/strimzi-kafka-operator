@@ -110,9 +110,7 @@ The default is `true`.
 <14> (Optional) Enables SASL support for client authentication when connecting to Kafka brokers.
 The default is `false`.
 <15> (Optional) The SASL username for client authentication.
-Mandatory only if SASL is enabled through `STRIMZI_SASL_ENABLED`.
 <16> (Optional) The SASL password for client authentication.
-Mandatory only if SASL is enabled through `STRIMZI_SASL_ENABLED`.
 <17> (Optional) The SASL mechanism for client authentication.
 Mandatory only if SASL is enabled through `STRIMZI_SASL_ENABLED`.
 You can set the value to `plain`, `scram-sha-256`, `scram-sha-512`, or `aws-msk-iam`.
